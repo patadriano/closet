@@ -1,0 +1,309 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PatAA\\source\\repos\\Closeted\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|c:\\users\\pataa\\source\\repos\\closeted\\closeted\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|solutionrelative:closeted\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|c:\\users\\pataa\\source\\repos\\closeted\\closeted\\views\\users\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|solutionrelative:closeted\\views\\users\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|c:\\users\\pataa\\source\\repos\\closeted\\closeted\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|solutionrelative:closeted\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|c:\\users\\pataa\\source\\repos\\closeted\\closeted\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|solutionrelative:closeted\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|c:\\users\\pataa\\source\\repos\\closeted\\closeted\\models\\full.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|solutionrelative:closeted\\models\\full.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|c:\\users\\pataa\\source\\repos\\closeted\\closeted\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|solutionrelative:closeted\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|c:\\users\\pataa\\source\\repos\\closeted\\closeted\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|solutionrelative:closeted\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|c:\\users\\pataa\\source\\repos\\closeted\\closeted\\models\\top.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|solutionrelative:closeted\\models\\top.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|c:\\users\\pataa\\source\\repos\\closeted\\closeted\\models\\headwear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|solutionrelative:closeted\\models\\headwear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|c:\\users\\pataa\\source\\repos\\closeted\\closeted\\models\\bottom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|solutionrelative:closeted\\models\\bottom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|c:\\users\\pataa\\source\\repos\\closeted\\closeted\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|solutionrelative:closeted\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|c:\\users\\pataa\\source\\repos\\closeted\\closeted\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|solutionrelative:closeted\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|c:\\users\\pataa\\source\\repos\\closeted\\closeted\\views\\users\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|solutionrelative:closeted\\views\\users\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|c:\\users\\pataa\\source\\repos\\closeted\\closeted\\views\\users\\index1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|solutionrelative:closeted\\views\\users\\index1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|c:\\users\\pataa\\source\\repos\\closeted\\closeted\\views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|solutionrelative:closeted\\views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|c:\\users\\pataa\\source\\repos\\closeted\\closeted\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|solutionrelative:closeted\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|c:\\users\\pataa\\source\\repos\\closeted\\closeted\\views\\users\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|solutionrelative:closeted\\views\\users\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|c:\\users\\pataa\\source\\repos\\closeted\\closeted\\closeted.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|solutionrelative:closeted\\closeted.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "Closeted\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "Closeted\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-14T04:18:07.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Full.cs",
+              "DocumentMoniker": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Models\\Full.cs",
+              "RelativeDocumentMoniker": "Closeted\\Models\\Full.cs",
+              "ToolTip": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Models\\Full.cs",
+              "RelativeToolTip": "Closeted\\Models\\Full.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T00:30:25.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Closeted\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Closeted\\Models\\ErrorViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T04:07:58.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Closeted\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Closeted\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAswKkAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T04:33:44.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Headwear.cs",
+              "DocumentMoniker": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Models\\Headwear.cs",
+              "RelativeDocumentMoniker": "Closeted\\Models\\Headwear.cs",
+              "ToolTip": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Models\\Headwear.cs",
+              "RelativeToolTip": "Closeted\\Models\\Headwear.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T04:06:56.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Top.cs",
+              "DocumentMoniker": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Models\\Top.cs",
+              "RelativeDocumentMoniker": "Closeted\\Models\\Top.cs",
+              "ToolTip": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Models\\Top.cs",
+              "RelativeToolTip": "Closeted\\Models\\Top.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T04:06:07.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Bottom.cs",
+              "DocumentMoniker": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Models\\Bottom.cs",
+              "RelativeDocumentMoniker": "Closeted\\Models\\Bottom.cs",
+              "ToolTip": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Models\\Bottom.cs",
+              "RelativeToolTip": "Closeted\\Models\\Bottom.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T04:05:46.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Closeted\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Closeted\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAAADsAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-13T04:02:46.837Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\appsettings.json",
+              "RelativeDocumentMoniker": "Closeted\\appsettings.json",
+              "ToolTip": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\appsettings.json",
+              "RelativeToolTip": "Closeted\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-13T02:39:07.69Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Views\\Users\\Index.cshtml",
+              "RelativeDocumentMoniker": "Closeted\\Views\\Users\\Index.cshtml",
+              "ToolTip": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Views\\Users\\Index.cshtml",
+              "RelativeToolTip": "Closeted\\Views\\Users\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-13T02:35:02.385Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index1.cshtml",
+              "DocumentMoniker": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Views\\Users\\Index1.cshtml",
+              "RelativeDocumentMoniker": "Closeted\\Views\\Users\\Index1.cshtml",
+              "ToolTip": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Views\\Users\\Index1.cshtml",
+              "RelativeToolTip": "Closeted\\Views\\Users\\Index1.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA4AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-13T02:34:02.573Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Program.cs",
+              "RelativeDocumentMoniker": "Closeted\\Program.cs",
+              "ToolTip": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Program.cs",
+              "RelativeToolTip": "Closeted\\Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB0AAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T02:21:26.222Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Views\\Users\\Details.cshtml",
+              "RelativeDocumentMoniker": "Closeted\\Views\\Users\\Details.cshtml",
+              "ToolTip": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Views\\Users\\Details.cshtml",
+              "RelativeToolTip": "Closeted\\Views\\Users\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-13T02:19:03.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Views\\Users\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Closeted\\Views\\Users\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Views\\Users\\Delete.cshtml",
+              "RelativeToolTip": "Closeted\\Views\\Users\\Delete.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-13T02:18:56.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Views\\Users\\Create.cshtml",
+              "RelativeDocumentMoniker": "Closeted\\Views\\Users\\Create.cshtml",
+              "ToolTip": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Views\\Users\\Create.cshtml",
+              "RelativeToolTip": "Closeted\\Views\\Users\\Create.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAAAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-13T02:18:53.925Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Closeted\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Closeted\\Controllers\\UsersController.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAEwEgAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T02:18:14.768Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Closeted.csproj",
+              "DocumentMoniker": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Closeted.csproj",
+              "RelativeDocumentMoniker": "Closeted\\Closeted.csproj",
+              "ToolTip": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Closeted.csproj",
+              "RelativeToolTip": "Closeted\\Closeted.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-13T02:17:06.989Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Closeted\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Models\\User.cs",
+              "RelativeToolTip": "Closeted\\Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T02:16:04.795Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

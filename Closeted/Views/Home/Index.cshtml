@@ -1,0 +1,105 @@
+﻿@using Closeted;
+
+@{
+    ViewData["Title"] = "Create New Items";
+}
+@{
+
+    IEnumerable<Top> top = ViewData["Top"] as IEnumerable<Top>;
+    IEnumerable<Bottom> bottom = ViewData["Bottom"] as IEnumerable<Bottom>;
+    IEnumerable<Headwear> headwear = ViewData["Headwear"] as IEnumerable<Headwear>;
+}
+
+<div class="text-center">
+    <h2>Create New Items</h2>
+
+   
+            @using (Html.BeginForm("Top", "Home", FormMethod.Post))
+                {
+            <h3>Top</h3>
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" name="Name" />
+                
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Top</button>
+                }
+            @using (Html.BeginForm("Bottom", "Home", FormMethod.Post))
+            {
+                <h3>Bottom</h3>
+                <div class="form-group">
+                    <label>Name</label>
+            <input type="text" name="Name" />
+
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Top</button>
+            }
+            @using (Html.BeginForm("Headwear", "Home", FormMethod.Post))
+            {
+                <h3>Headwear</h3>
+                <div class="form-group">
+                    <label>Name</label>
+            <input type="text" name="Name" />
+
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Top</button>
+            }
+
+            <h3>Existing Items</h3>
+
+            <!-- Display Tops in a table -->
+            <h4>Tops</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in top)
+                    {
+                        <tr>
+                    <td>@item.Name</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <!-- Display Bottoms in a table -->
+            <h4>Bottoms</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+        <tbody>
+            @foreach (var item in bottom)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                </tr>
+            }
+        </tbody>
+            </table>
+
+            <!-- Display Headwear in a table -->
+            <h4>Headwear</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+        <tbody>
+            @foreach (var item in headwear)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                </tr>
+            }
+        </tbody>
+            </table>
+    
+</div>
+
