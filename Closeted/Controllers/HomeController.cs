@@ -4,6 +4,14 @@ using Microsoft.Data.SqlClient;
 using System.Data;
 using System.Diagnostics;
 using System.Text;
+using System.Web;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using System.Data;
+using System.Data.SqlClient;
+using System.IO;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Closeted.Controllers
 {
@@ -144,40 +152,34 @@ namespace Closeted.Controllers
 
         public List<Headwear> GetHeadwear()
         {
-            
             List<Headwear> headwearList = new List<Headwear>();
-
             StringBuilder sQuery = new StringBuilder();
-            sQuery.AppendLine("SELECT Name FROM [Headwear];");
+            sQuery.AppendLine("SELECT Image FROM [Headwear];");
 
             try
             {
                 using (SqlConnection oConnection = new SqlConnection(_configuration.GetConnectionString("MVCCRUD")))
                 {
-                    oConnection.Open(); // Open connection asynchronously
-
+                    oConnection.Open();
                     using (SqlCommand oCommand = new SqlCommand())
                     {
                         oCommand.Connection = oConnection;
                         oCommand.CommandText = sQuery.ToString();
                         oCommand.CommandType = CommandType.Text;
 
-
                         using (SqlDataReader reader = oCommand.ExecuteReader())
                         {
-                            // Check if there are any results
                             if (reader.HasRows)
                             {
                                 while (reader.Read())
-                                {Headwear headwear = new Headwear();
-                                    // Read data for each row (example: retrieve the "Name" column)
-                                    headwear.Name = reader["Name"].ToString();
+                                {
+                                    var headwear = new Headwear
+                                    {
+                                        
+                                        Image = reader["Image"] as byte[]  // Cast to byte[]
+                                    };
                                     headwearList.Add(headwear);
                                 }
-                            }
-                            else
-                            {
-                                Console.WriteLine("No rows found.");
                             }
                         }
                     }
@@ -190,6 +192,8 @@ namespace Closeted.Controllers
 
             return headwearList;
         }
+
+
         [HttpPost]
         public ActionResult Top(Top top)
         {
@@ -267,44 +271,51 @@ namespace Closeted.Controllers
             return RedirectToAction("Privacy");
         }
         [HttpPost]
-        public ActionResult Headwear(Headwear headwear)
+        public IActionResult Upload(IFormFile file)
         {
-            StringBuilder sQuery = new StringBuilder();
-            sQuery.AppendLine("INSERT INTO [Headwear] (Name) VALUES (@Name);");
-
-            try
+            if (file != null && file.Length > 0)
             {
-                using (SqlConnection oConnection = new SqlConnection(_configuration.GetConnectionString("MVCCRUD")))
+                // Convert the uploaded image into a byte array
+                byte[] imageData;
+                using (var memoryStream = new MemoryStream())
                 {
-                    oConnection.Open(); // Open connection asynchronously
+                    file.CopyTo(memoryStream);
+                    imageData = memoryStream.ToArray();
+                }
 
-                    using (SqlCommand oCommand = new SqlCommand())
-                    {
-                        oCommand.Connection = oConnection;
-                        oCommand.CommandText = sQuery.ToString();
-                        oCommand.CommandType = CommandType.Text;
+                // Save the image to the database
+                SaveImageToDatabase( imageData);
 
-                        // Add parameters to prevent SQL injection
-                        oCommand.Parameters.AddWithValue("@Name", headwear.Name);
+                return Content("Image uploaded successfully.");
+            }
+            else
+            {
+                return Content("No file selected.");
+            }
+        }
 
+        private void SaveImageToDatabase(byte[] imageData)
+        {
+            using (SqlConnection conn = new SqlConnection(_configuration.GetConnectionString("MVCCRUD")))
+            {
+                string query = "INSERT INTO Headwear (Image) VALUES (@Image)";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                
+                cmd.Parameters.AddWithValue("@Image", imageData);
 
-                        /*int rowsAffected = oCommand.ExecuteNonQuery();*/ // Execute the query
-                        oCommand.ExecuteNonQuery();
-
-                        //if (rowsAffected > 0)
-                        //{
-                        //    return RedirectToAction("Index1");
-                        //}
-
-                    }
+                try
+                {
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    // Log or handle the exception
+                    Console.WriteLine(ex.Message);
                 }
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"An error occurred: {ex.Message}");
-            }
-            return RedirectToAction("Privacy");
         }
-        
+
+
     }
 }

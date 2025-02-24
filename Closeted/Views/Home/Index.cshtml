@@ -20,6 +20,7 @@
             <div class="form-group">
                 <label>Name</label>
                 <input type="text" name="Name" />
+            <input type="file" name="topimage" />
                 
             </div>
             <button type="submit" class="btn btn-primary">Submit Top</button>
@@ -30,20 +31,22 @@
                 <div class="form-group">
                     <label>Name</label>
             <input type="text" name="Name" />
+            <input type="file" name="bottomimage" />
 
                 </div>
                 <button type="submit" class="btn btn-primary">Submit Top</button>
             }
-            @using (Html.BeginForm("Headwear", "Home", FormMethod.Post))
-            {
-                <h3>Headwear</h3>
-                <div class="form-group">
-                    <label>Name</label>
-            <input type="text" name="Name" />
+    @using (Html.BeginForm("Upload", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div>
+            <label for="file">Choose an image:</label>
+            <input type="file" name="file" id="file" />
+        </div>
+        <div>
+            <button type="submit">Upload</button>
+        </div>
+    }
 
-                </div>
-                <button type="submit" class="btn btn-primary">Submit Top</button>
-            }
 
             <h3>Existing Items</h3>
 
@@ -93,11 +96,25 @@
                 </thead>
         <tbody>
             @foreach (var item in headwear)
-            {
-                <tr>
-                    <td>@item.Name</td>
-                </tr>
-            }
+        {
+            <tr>
+                <!-- Display Name -->
+                
+
+                <!-- Display Image if ImageData is available -->
+                <td>
+                    @if (item.Image != null && item.Image.Length > 0)
+                    {
+                        var base64Image = Convert.ToBase64String(item.Image);
+                        <img src="data:image/jpeg;base64,@base64Image" style="max-width: 100px; height: auto;" />
+                    }
+                    else
+                    {
+                        <span>No image available</span>
+                    }
+                </td>
+            </tr>
+        }
         </tbody>
             </table>
     
