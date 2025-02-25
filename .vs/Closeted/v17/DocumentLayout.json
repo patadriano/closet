@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\PatAA\\source\\repos\\Closeted\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|C:\\Users\\PatAA\\source\\repos\\Closeted\\closeted\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|solutionrelative:closeted\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|c:\\users\\pataa\\source\\repos\\closeted\\closeted\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|solutionrelative:closeted\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|C:\\Users\\PatAA\\source\\repos\\Closeted\\closeted\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|solutionrelative:closeted\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|C:\\Users\\PatAA\\source\\repos\\Closeted\\closeted\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|solutionrelative:closeted\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E22D921B-2809-4E22-80B9-010A8745C259}|Closeted\\Closeted.csproj|C:\\Users\\PatAA\\source\\repos\\Closeted\\closeted\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -146,7 +146,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 265,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -162,26 +162,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "Closeted\\Views\\Home\\Privacy.cshtml",
               "ToolTip": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Views\\Home\\Privacy.cshtml",
               "RelativeToolTip": "Closeted\\Views\\Home\\Privacy.cshtml",
-              "ViewState": "AQIAAGYAAAAAAAAAAAAAAGcAAAARAAAA",
+              "ViewState": "AQIAAI4AAAAAAAAAAAAcwJ4AAABIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-14T04:18:07.721Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Closeted\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Closeted\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAF8AAAAAAAAAAAAQwGwAAAArAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAAxwCoAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-13T04:33:44.885Z",
               "EditorCaption": ""
@@ -212,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Program.cs",
               "RelativeDocumentMoniker": "Closeted\\Program.cs",
@@ -308,7 +308,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\PatAA\\source\\repos\\Closeted\\Closeted\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Closeted\\Views\\Home\\Index.cshtml",
