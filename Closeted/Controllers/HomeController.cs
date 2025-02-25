@@ -27,11 +27,7 @@ namespace Closeted.Controllers
 
         public IActionResult Index()
         {
-            //Full full = new Full();
-            //full.top = GetTop();
-            //full.bottom = GetBottom();
-            //full.headwear = GetHeadwear();
-            //return View(full);
+            
             ViewData["Top"] = GetTop();
             ViewData["Bottom"] = GetBottom();
             ViewData["Headwear"] = GetHeadwear();
@@ -40,6 +36,9 @@ namespace Closeted.Controllers
 
         public IActionResult Privacy()
         {
+            ViewData["Top"] = GetTop();
+            ViewData["Bottom"] = GetBottom();
+            ViewData["Headwear"] = GetHeadwear();
             return View();
         }
 
@@ -54,13 +53,13 @@ namespace Closeted.Controllers
             List<Top> topList = new List<Top>();
 
             StringBuilder sQuery = new StringBuilder();
-            sQuery.AppendLine("SELECT Name FROM [Top];");
+            sQuery.AppendLine("SELECT Image FROM [Top];");
 
             try
             {
                 using (SqlConnection oConnection = new SqlConnection(_configuration.GetConnectionString("MVCCRUD")))
                 {
-                    oConnection.Open(); // Open connection asynchronously
+                    oConnection.Open(); 
 
                     using (SqlCommand oCommand = new SqlCommand())
                     {
@@ -78,10 +77,10 @@ namespace Closeted.Controllers
                                 {
                                     Top top = new Top();
 
-                                    
-                                    top.Name = reader["Name"].ToString();
 
-                                    
+                                    top.Image = reader["Image"] as byte[];
+
+
                                     topList.Add(top);
                                 }
                             }
@@ -107,7 +106,7 @@ namespace Closeted.Controllers
             List<Bottom> bottomList = new List<Bottom>();
 
             StringBuilder sQuery = new StringBuilder();
-            sQuery.AppendLine("SELECT Name FROM [Bottom];");
+            sQuery.AppendLine("SELECT Image FROM [Bottom];");
 
             try
             {
@@ -129,8 +128,8 @@ namespace Closeted.Controllers
                             {
                                 while (reader.Read())
                                 {  Bottom bottom = new Bottom();
-                                    
-                                    bottom.Name = reader["Name"].ToString();
+
+                                    bottom.Image = reader["Image"] as byte[];
                                     bottomList.Add(bottom);
                                 }
                             }
@@ -195,83 +194,31 @@ namespace Closeted.Controllers
 
 
         [HttpPost]
-        public ActionResult Top(Top top)
+        public IActionResult Top(IFormFile file)
         {
-           
-            StringBuilder sQuery = new StringBuilder();
-            sQuery.AppendLine("INSERT INTO [Top] (Name) VALUES (@Name);");
 
-            try
+            if (file != null && file.Length > 0)
             {
-                using (SqlConnection oConnection = new SqlConnection(_configuration.GetConnectionString("MVCCRUD")))
+                // Convert the uploaded image into a byte array
+                byte[] imageData;
+                using (var memoryStream = new MemoryStream())
                 {
-                     oConnection.Open(); // Open connection asynchronously
-
-                    using (SqlCommand oCommand = new SqlCommand())
-                    {
-                        oCommand.Connection = oConnection;
-                        oCommand.CommandText = sQuery.ToString();
-                        oCommand.CommandType = CommandType.Text;
-
-                        // Add parameters to prevent SQL injection
-                        oCommand.Parameters.AddWithValue("@Name", top.Name);
-
-
-                        /*int rowsAffected = oCommand.ExecuteNonQuery();*/ // Execute the query
-                        oCommand.ExecuteNonQuery();
-
-                      
-
-                    }
+                    file.CopyTo(memoryStream);
+                    imageData = memoryStream.ToArray();
                 }
+
+                // Save the image to the database
+                SaveImageToDatabase3(imageData);
+
+                return RedirectToAction("Index");
             }
-            catch (Exception ex)
+            else
             {
-                Console.WriteLine($"An error occurred: {ex.Message}");
+                return Content("No file selected.");
             }
-            return RedirectToAction("Privacy");
         }
         [HttpPost]
-        public ActionResult Bottom(Bottom bottom)
-        {
-            StringBuilder sQuery = new StringBuilder();
-            sQuery.AppendLine("INSERT INTO [Bottom] (Name) VALUES (@Name);");
-
-            try
-            {
-                using (SqlConnection oConnection = new SqlConnection(_configuration.GetConnectionString("MVCCRUD")))
-                {
-                    oConnection.Open(); // Open connection asynchronously
-
-                    using (SqlCommand oCommand = new SqlCommand())
-                    {
-                        oCommand.Connection = oConnection;
-                        oCommand.CommandText = sQuery.ToString();
-                        oCommand.CommandType = CommandType.Text;
-
-                        // Add parameters to prevent SQL injection
-                        oCommand.Parameters.AddWithValue("@Name", bottom.Name);
-
-
-                        /*int rowsAffected = oCommand.ExecuteNonQuery();*/ // Execute the query
-                        oCommand.ExecuteNonQuery();
-
-                        //if (rowsAffected > 0)
-                        //{
-                        //    return RedirectToAction("Index1");
-                        //}
-
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"An error occurred: {ex.Message}");
-            }
-            return RedirectToAction("Privacy");
-        }
-        [HttpPost]
-        public IActionResult Upload(IFormFile file)
+        public IActionResult Bottom(IFormFile file)
         {
             if (file != null && file.Length > 0)
             {
@@ -284,9 +231,32 @@ namespace Closeted.Controllers
                 }
 
                 // Save the image to the database
-                SaveImageToDatabase( imageData);
+                SaveImageToDatabase2(imageData);
 
-                return Content("Image uploaded successfully.");
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return Content("No file selected.");
+            }
+        }
+        [HttpPost]
+        public IActionResult Headwear(IFormFile file)
+        {
+            if (file != null && file.Length > 0)
+            {
+                // Convert the uploaded image into a byte array
+                byte[] imageData;
+                using (var memoryStream = new MemoryStream())
+                {
+                    file.CopyTo(memoryStream);
+                    imageData = memoryStream.ToArray();
+                }
+
+                // Save the image to the database
+                SaveImageToDatabase1( imageData);
+
+                return RedirectToAction("Index");
             }
             else
             {
@@ -294,7 +264,7 @@ namespace Closeted.Controllers
             }
         }
 
-        private void SaveImageToDatabase(byte[] imageData)
+        private void SaveImageToDatabase1(byte[] imageData)
         {
             using (SqlConnection conn = new SqlConnection(_configuration.GetConnectionString("MVCCRUD")))
             {
@@ -315,7 +285,48 @@ namespace Closeted.Controllers
                 }
             }
         }
+        private void SaveImageToDatabase2(byte[] imageData)
+        {
+            using (SqlConnection conn = new SqlConnection(_configuration.GetConnectionString("MVCCRUD")))
+            {
+                string query = "INSERT INTO Bottom (Image) VALUES (@Image)";
+                SqlCommand cmd = new SqlCommand(query, conn);
 
+                cmd.Parameters.AddWithValue("@Image", imageData);
+
+                try
+                {
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    // Log or handle the exception
+                    Console.WriteLine(ex.Message);
+                }
+            }
+        }
+        private void SaveImageToDatabase3(byte[] imageData)
+        {
+            using (SqlConnection conn = new SqlConnection(_configuration.GetConnectionString("MVCCRUD")))
+            {
+                string query = "INSERT INTO [Top] (Image) VALUES (@Image)";
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@Image", imageData);
+
+                try
+                {
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    // Log or handle the exception
+                    Console.WriteLine(ex.Message);
+                }
+            }
+        }
 
     }
 }

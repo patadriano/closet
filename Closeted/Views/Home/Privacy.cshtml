@@ -1,6 +1,133 @@
 ﻿@{
     ViewData["Title"] = "Privacy Policy";
 }
+@{
+    IEnumerable<Top> top = ViewData["Top"] as IEnumerable<Top>;
+    IEnumerable<Bottom> bottom = ViewData["Bottom"] as IEnumerable<Bottom>;
+    IEnumerable<Headwear> headwear = ViewData["Headwear"] as IEnumerable<Headwear>;
+    var base64Images = headwear.Select(h => h.Image != null ? Convert.ToBase64String(h.Image) : null).Where(img => img != null).ToList();
+}
+
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<!-- Top Section -->
+<h3>Top</h3>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th colspan="3">Images</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < top.Count(); i++)
+        {
+            var base64Image = top.ElementAt(i).Image != null
+            ? Convert.ToBase64String(top.ElementAt(i).Image)
+            : null;
+
+            <tr id="topImageRow_@i" class="imageRow" style="display: none;" data-image="@base64Image">
+                <td colspan="3" style="text-align: center;">
+                    <button type="button" class="prevButton" onclick="changeImage(-1, 'top')">Previous</button>
+                </td>
+                <td>
+                    @if (base64Image != null)
+                    {
+                        <img src="data:image/jpeg;base64,@base64Image" style="max-width: 100px; height: auto;" />
+                    }
+                </td>
+                <td>
+                    <button type="button" class="nextButton" onclick="changeImage(1, 'top')">Next</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Bottom Section -->
+<h3>Bottom</h3>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th colspan="3">Images</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < bottom.Count(); i++)
+        {
+            var base64Image = bottom.ElementAt(i).Image != null
+            ? Convert.ToBase64String(bottom.ElementAt(i).Image)
+            : null;
+
+            <tr class="imageRow" style="display: none;">
+                <td colspan="3" style="text-align: center;">
+                    <button type="button" class="prevButton" onclick="changeImage(-1, @i)">Previous</button>
+                </td>
+                <td>
+                    @if (base64Image != null)
+                    {
+                        <img src="data:image/jpeg;base64,@base64Image" style="max-width: 100px; height: auto;" />
+                    }
+                </td>
+                <td>
+                    <button type="button" class="nextButton" onclick="changeImage(1, @i)">Next</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Headwear Section -->
+<h3>Headwear</h3>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th colspan="3">Images</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="3" style="text-align: center;">
+                <button type="button" id="prevButton">Previous</button>
+            </td>
+            <td>
+                @if (base64Images.Any())
+                {
+                    @for (int i = 0; i < base64Images.Count; i++)
+                    {
+                        <img class="headwearImage" src="data:image/jpeg;base64,@base64Images[i]"
+                             style="max-width: 100px; height: auto; display: @(i == 0 ? "block" : "none");" />
+                    }
+                }
+            </td>
+            <td>
+                <button type="button" id="nextButton">Next</button>
+            </td>
+        </tr>
+    </tbody>
+
+
+</table>
+
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+        let images = document.querySelectorAll(".headwearImage");
+        let currentIndex = 0;
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.style.display = i === index ? "block" : "none"; // Show one, hide others
+            });
+        }
+
+        document.getElementById("prevButton").addEventListener("click", function () {
+            currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop back
+            showImage(currentIndex);
+        });
+
+        document.getElementById("nextButton").addEventListener("click", function () {
+            currentIndex = (currentIndex + 1) % images.length; // Loop forward
+            showImage(currentIndex);
+        });
+    });
+
+</script>

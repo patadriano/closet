@@ -13,110 +13,194 @@
 <div class="text-center">
     <h2>Create New Items</h2>
 
-   
-            @using (Html.BeginForm("Top", "Home", FormMethod.Post))
-                {
-            <h3>Top</h3>
-            <div class="form-group">
-                <label>Name</label>
-                <input type="text" name="Name" />
-            <input type="file" name="topimage" />
-                
-            </div>
-            <button type="submit" class="btn btn-primary">Submit Top</button>
-                }
-            @using (Html.BeginForm("Bottom", "Home", FormMethod.Post))
+
+    
+    
+    
+    <div class="row">
+        <div class="col-4">
+
+            @using (Html.BeginForm("Top", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
             {
-                <h3>Bottom</h3>
-                <div class="form-group">
-                    <label>Name</label>
-            <input type="text" name="Name" />
-            <input type="file" name="bottomimage" />
-
+                <h3>Top</h3>
+                <div>
+                    <label for="file">Choose an image:</label>
+                    <input type="file" name="file" id="file" />
                 </div>
-                <button type="submit" class="btn btn-primary">Submit Top</button>
+                <div>
+                    <button type="submit">Upload</button>
+                </div>
             }
-    @using (Html.BeginForm("Upload", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
-    {
-        <div>
-            <label for="file">Choose an image:</label>
-            <input type="file" name="file" id="file" />
-        </div>
-        <div>
-            <button type="submit">Upload</button>
-        </div>
-    }
-
-
-            <h3>Existing Items</h3>
-
             <!-- Display Tops in a table -->
             <h4>Tops</h4>
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>Name</th>
+                        <th colspan="2">Images</th> <!-- Another column for the second image -->
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var item in top)
+                    @for (int i = 0; i < top.Count(); i += 2)
                     {
                         <tr>
-                    <td>@item.Name</td>
+                            <!-- First Image -->
+                            <td>
+                                @if (top.ElementAt(i).Image != null && top.ElementAt(i).Image.Length > 0)
+                                {
+                                    var base64Image = Convert.ToBase64String(top.ElementAt(i).Image);
+                                    <img src="data:image/jpeg;base64,@base64Image" style="max-width: 100px; height: auto;" />
+                                }
+                                else
+                                {
+                                    <span>No image available</span>
+                                }
+                            </td>
+
+                            <!-- Second Image (if available) -->
+                            @if (i + 1 < top.Count())
+                            {
+                                <td>
+                                    @if (top.ElementAt(i + 1).Image != null && top.ElementAt(i + 1).Image.Length > 0)
+                                    {
+                                        var base64Image = Convert.ToBase64String(top.ElementAt(i + 1).Image);
+                                        <img src="data:image/jpeg;base64,@base64Image" style="max-width: 100px; height: auto;" />
+                                    }
+                                    else
+                                    {
+                                        <span>No image available</span>
+                                    }
+                                </td>
+                            }
                         </tr>
                     }
                 </tbody>
             </table>
-
+        </div>
+        <div class="col-4">
+            @using (Html.BeginForm("Bottom", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <h3>Bottom</h3>
+                <div>
+                    <label for="file">Choose an image:</label>
+                    <input type="file" name="file" id="file" />
+                </div>
+                <div>
+                    <button type="submit">Upload</button>
+                </div>
+            }
             <!-- Display Bottoms in a table -->
             <h4>Bottoms</h4>
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>Name</th>
+                        <th colspan="2">Images</th> <!-- Another column for the second image -->
                     </tr>
                 </thead>
-        <tbody>
-            @foreach (var item in bottom)
-            {
-                <tr>
-                    <td>@item.Name</td>
-                </tr>
-            }
-        </tbody>
-            </table>
+                <tbody>
+                    @for (int i = 0; i < bottom.Count(); i += 2)
+                    {
+                        <tr>
+                            <!-- First Image -->
+                            <td>
+                                @if (bottom.ElementAt(i).Image != null && bottom.ElementAt(i).Image.Length > 0)
+                                {
+                                    var base64Image = Convert.ToBase64String(bottom.ElementAt(i).Image);
+                                    <img src="data:image/jpeg;base64,@base64Image" style="max-width: 100px; height: auto;" />
+                                }
+                                else
+                                {
+                                    <span>No image available</span>
+                                }
+                            </td>
 
+                            <!-- Second Image (if available) -->
+                            @if (i + 1 < bottom.Count())
+                            {
+                                <td>
+                                    @if (bottom.ElementAt(i + 1).Image != null && bottom.ElementAt(i + 1).Image.Length > 0)
+                                    {
+                                        var base64Image = Convert.ToBase64String(bottom.ElementAt(i + 1).Image);
+                                        <img src="data:image/jpeg;base64,@base64Image" style="max-width: 100px; height: auto;" />
+                                    }
+                                    else
+                                    {
+                                        <span>No image available</span>
+                                    }
+                                </td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            </div>
+        <div class="col-4">
+            @using (Html.BeginForm("Headwear", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <h3>Headwear</h3>
+                <div>
+                    <label for="file">Choose an image:</label>
+                    <input type="file" name="file" id="file" />
+                </div>
+                <div>
+                    <button type="submit">Upload</button>
+                </div>
+            }
             <!-- Display Headwear in a table -->
             <h4>Headwear</h4>
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>Name</th>
+                        <th colspan="2">Images</th> <!-- Another column for the second image -->
                     </tr>
                 </thead>
-        <tbody>
-            @foreach (var item in headwear)
-        {
-            <tr>
-                <!-- Display Name -->
-                
+                <tbody>
+                    @for (int i = 0; i < headwear.Count(); i += 2)
+                    {
+                        <tr>
+                            <!-- First Image -->
+                            <td>
+                                @if (headwear.ElementAt(i).Image != null && headwear.ElementAt(i).Image.Length > 0)
+                                {
+                                    var base64Image = Convert.ToBase64String(headwear.ElementAt(i).Image);
+                                    <img src="data:image/jpeg;base64,@base64Image" style="max-width: 100px; height: auto;" />
+                                }
+                                else
+                                {
+                                    <span>No image available</span>
+                                }
+                            </td>
 
-                <!-- Display Image if ImageData is available -->
-                <td>
-                    @if (item.Image != null && item.Image.Length > 0)
-                    {
-                        var base64Image = Convert.ToBase64String(item.Image);
-                        <img src="data:image/jpeg;base64,@base64Image" style="max-width: 100px; height: auto;" />
+                            <!-- Second Image (if available) -->
+                            @if (i + 1 < headwear.Count())
+                            {
+                                <td>
+                                    @if (headwear.ElementAt(i + 1).Image != null && headwear.ElementAt(i + 1).Image.Length > 0)
+                                    {
+                                        var base64Image = Convert.ToBase64String(headwear.ElementAt(i + 1).Image);
+                                        <img src="data:image/jpeg;base64,@base64Image" style="max-width: 100px; height: auto;" />
+                                    }
+                                    else
+                                    {
+                                        <span>No image available</span>
+                                    }
+                                </td>
+                            }
+                        </tr>
                     }
-                    else
-                    {
-                        <span>No image available</span>
-                    }
-                </td>
-            </tr>
-        }
-        </tbody>
+                </tbody>
             </table>
+
+
+                    </div>
+        
+    </div>
+
+           
+
+            
+            
+
+            
     
 </div>
 
